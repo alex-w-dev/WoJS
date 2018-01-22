@@ -37,6 +37,7 @@ export class AppComponent {
   private lineChartType:string = 'line';
 
   constructor(private rt: RealTime) {
+    // some comment
     this.rt.onReady().subscribe(() => {
       this.todoRef = this.rt.FireLoop.ref<Todo>(Todo);
       this.todoRef.stats().subscribe((stats: any) => {
